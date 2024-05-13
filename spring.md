@@ -63,4 +63,9 @@ public class hellocontroller {
 - MVC와 템플릿 엔진을 사용하는 방식과 API를 사용하는 방식으로 나뉩니다.
 3. MVC(model,view,controller)와 템플릿 엔진을 이용한 웹 개발
 - MVC 패턴을 이용해 Model, View, Cotroller로 나누어 웹을 개발하면 클라이언트가 서버에 웹 문서를 요청할 경우, HTML을 동적 으로 바꾸어 응답해줍니다.
+![alt text](image-1.png)
+4. API
+- 서버에 요청이 들어오면 뷰를 거치지 않고 컨트롤러에서 직접 JSON(Javascript 객체 문법으로 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷) 형식의 데이터를 클라이언트에게 리턴해줍니다.
+- 주로 React( React는 facebook에서 제공해주는 프론트엔드 라이브러리)단에서 화면을 그리는 것과 같이 다른 애플리케이션을 통해 웹 문서를 재생성하여 제공할 때 사용됩니다.
+- API를 통해 서버 또는 프로그램 사이를 연결할 수 있게 한다. 즉 REST API는 RSET 아키텍처를 따르는 시스템,애플리케이션 인터페이스라고 볼 수 있다.
 
