@@ -28,7 +28,7 @@
 - 실질적으로 Controller를 실행하는 것은 Handler Adapter이다.
 - View Resolver는 "전략 객체"  View Resolver에게 전달되는 정보는 view name뿐만이 아니라, header 정보(accept 등)도 전달된다header 정보 내의 Accept는 기본적으로는 HTML에 따라서는 JSON, XML인 경우도 있다. View Resolver는 전달된 정보를 바탕으로 사용자에게 보여줄 view가 무엇인지를 결정한다.JSP의 경우 JstlView 객체가 생성된다. 
 - JstlView 객체가 "abcd.jsp"에 포워딩하여 결과를 보여준다(JSP 객체를 생성하는 것이 아니다).
-# spring mvc의 구성요서
+# spring mvc의 구성요소
 1.  DispatcherServlet 는 모든 HTTP 요청을 받아들여서 다른 객체들 사이의 흐름을 제어 하는 역할을 한다. Front Controller를 담당
 2. HandlerMapping 는 클라이언트의 요청을 바탕으로 어떤 Handler(Controller 메소드)를 실행할지 결정
 3.  Model 는 Controller에서 View로 넘겨줄 객체가 저장되는 곳.
@@ -52,3 +52,15 @@ public class hellocontroller {
 }
 ```
 - 이게 스프링에 controller로 이다.
+# 스프링 웹 개발 기초
+1. 정적컨텐츠
+- 클라이언트의 요청을 받고 서버에 미리 저장된 HTML, CSS, JS 등의 파일을 그대로 응답해 보여주는 것을 말합니다.
+- 모든 클라이언트들의 요청에 대해 동일한 결과를 보여줍니다.
+- 클라이언트로부터 localhost:8080/hello-static.html 요청이 들어오게 되면 우선 Tomcat 서버를 거치고 그 다음 컨트롤러에서 hello-static 에 매핑하는 동작이있는지 확인합니다.
+이후 해당 동작이 없을 경우 /resources/static 하위에서 해당하는 파일을 찾아 반환해줍니다.
+2. 동적 컨텐츠
+- 어떤 클라이언트가 언제, 어디서, 어떻게 서버에 요청했는지에 따라 각기 다른 결과를 보여줍니다.
+- MVC와 템플릿 엔진을 사용하는 방식과 API를 사용하는 방식으로 나뉩니다.
+3. MVC(model,view,controller)와 템플릿 엔진을 이용한 웹 개발
+- MVC 패턴을 이용해 Model, View, Cotroller로 나누어 웹을 개발하면 클라이언트가 서버에 웹 문서를 요청할 경우, HTML을 동적 으로 바꾸어 응답해줍니다.
+
